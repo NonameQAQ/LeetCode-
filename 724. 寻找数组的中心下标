@@ -1,0 +1,22 @@
+public class Solution {
+    public int PivotIndex(int[] nums) {
+        int n=nums.Length;
+        int answer=0;
+        bool isDone=false;
+        for(int i=0;i<n;i++){
+            int a1=0,b1=0;
+            for(int a=0;b<i;a++){
+                a1+=nums[a];
+            }
+            for(int b=n-1;b>i;b--){
+                b1+=nums[b];
+            }
+            if(a1==b1&&isDone==false){
+                answer=nums[i];
+                isDone=true;
+            }else if(a1==b1&&isDone==true){
+
+            }
+        }
+    }
+}
