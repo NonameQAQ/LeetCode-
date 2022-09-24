@@ -1,0 +1,21 @@
+public class Solution {
+    public int Search(int[] nums, int target) {
+        return Dou(nums,0,nums.Length - 1,target);
+    }
+    public int Dou(int[] nums,int l,int r,int target){
+        if(l>r){
+            return -1;
+        }
+        int min=(l+r)/2;
+        if(nums[min]==target){
+            return min;
+        }
+        if(nums[min]>target){
+            return Dou(nums,l,min-1,target);
+        }
+        if(nums[min]<target){
+            return Dou(nums,min+1,r,target);
+        }
+        return -1;
+    }
+}
